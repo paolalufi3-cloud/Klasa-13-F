@@ -1,9 +1,16 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $euro = floatval($_POST["euro"]);
-    $rate = floatval($_POST["rate"]);
+    // Merr të dhënat nga formulari
+    $currencies = [
+        "euro" => "Euro",
+        "usd" => "Dollar Amerikan (USD)",
+        "gbp" => "Pound Britanik (GBP)",
+        "chf" => "Franga Zvicerane (CHF)",
+        "cad" => "Dollar Kanadez (CAD)",
+        "aud" => "Dollar Australian (AUD)",
+        "sek" => "Korona Suedeze (SEK)"
+    ];
 
-    $lek = $euro * $rate;
     ?>
 
     <!DOCTYPE html>
@@ -13,10 +20,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <title>Rezultati</title>
     </head>
     <body>
-        <h1>Rezultati i Konvertimit</h1>
-        <p>Vlera në Euro: <strong><?php echo $euro; ?></strong></p>
-        <p>Koeficienti i këmbimit: <strong><?php echo $rate; ?></strong></p>
-        <p>Shuma e konvertuar në Lekë: <strong><?php echo $lek; ?> Lekë</strong></p>
+        <h1>Rezultatet e Konvertimit</h1>
+
+        <?php
+        foreach ($currencies as $key => $name) {
+            $amount = floatval($_POST[$key]);
+            $rate = floatval($_POST[$key . "_rate"]);
+            $converted = $amount * $rate;
+            echo "<p><strong>$name</strong></p>";
+            echo "<ul>";
+            echo "<li>Shuma: $amount</li>";
+            echo "<li>Kursi: $rate</li>";
+            echo "<li>Vlera në Lekë: <strong>$converted Lekë</strong></li>";
+            echo "</ul>";
+        }
+        ?>
 
         <br>
         <a href="index.html">🔙 Kthehu pas</a>
