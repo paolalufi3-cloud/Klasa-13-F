@@ -5,13 +5,50 @@
     <title>Këmbim Valutor</title>
 </head>
 <body>
-    <h1>Këmbim Valutor: Euro në Lekë</h1>
+    <h1>Këmbim Valutor: Monedhat në Lekë</h1>
     <form action="convert.php" method="post">
-        <label for="euro">Shkruaj vlerën në Euro:</label><br>
-        <input type="number" step="0.01" name="euro" id="euro" required><br><br>
 
-        <label for="rate">Shkruaj koeficientin e këmbimit (p.sh. 100.5):</label><br>
-        <input type="number" step="0.01" name="rate" id="rate" required><br><br>
+        <h3>Euro (€)</h3>
+        <label for="euro">Shuma në Euro:</label><br>
+        <input type="number" step="0.01" name="euro" id="euro" required><br>
+        <label for="euro_rate">Koeficienti i këmbimit:</label><br>
+        <input type="number" step="0.01" name="euro_rate" id="euro_rate" required><br><br>
+
+        <h3>Dollar Amerikan (USD)</h3>
+        <label for="usd">Shuma në USD:</label><br>
+        <input type="number" step="0.01" name="usd" id="usd" required><br>
+        <label for="usd_rate">Koeficienti i këmbimit:</label><br>
+        <input type="number" step="0.01" name="usd_rate" id="usd_rate" required><br><br>
+
+        <h3>Pound Britanik (GBP)</h3>
+        <label for="gbp">Shuma në GBP:</label><br>
+        <input type="number" step="0.01" name="gbp" id="gbp" required><br>
+        <label for="gbp_rate">Koeficienti i këmbimit:</label><br>
+        <input type="number" step="0.01" name="gbp_rate" id="gbp_rate" required><br><br>
+
+        <h3>Franga Zvicerane (CHF)</h3>
+        <label for="chf">Shuma në CHF:</label><br>
+        <input type="number" step="0.01" name="chf" id="chf" required><br>
+        <label for="chf_rate">Koeficienti i këmbimit:</label><br>
+        <input type="number" step="0.01" name="chf_rate" id="chf_rate" required><br><br>
+
+        <h3>Dollar Kanadez (CAD)</h3>
+        <label for="cad">Shuma në CAD:</label><br>
+        <input type="number" step="0.01" name="cad" id="cad" required><br>
+        <label for="cad_rate">Koeficienti i këmbimit:</label><br>
+        <input type="number" step="0.01" name="cad_rate" id="cad_rate" required><br><br>
+
+        <h3>Dollar Australian (AUD)</h3>
+        <label for="aud">Shuma në AUD:</label><br>
+        <input type="number" step="0.01" name="aud" id="aud" required><br>
+        <label for="aud_rate">Koeficienti i këmbimit:</label><br>
+        <input type="number" step="0.01" name="aud_rate" id="aud_rate" required><br><br>
+
+        <h3>Korona Suedeze (SEK)</h3>
+        <label for="sek">Shuma në SEK:</label><br>
+        <input type="number" step="0.01" name="sek" id="sek" required><br>
+        <label for="sek_rate">Koeficienti i këmbimit:</label><br>
+        <input type="number" step="0.01" name="sek_rate" id="sek_rate" required><br><br>
 
         <input type="submit" value="Konverto">
     </form>
